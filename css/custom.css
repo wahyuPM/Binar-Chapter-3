@@ -1,5 +1,10 @@
-* {
+body {
     font-family: "Roboto", sans-serif;
+    line-height: 1.7;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 .hero {
@@ -30,22 +35,23 @@
     text-transform: uppercase;
     font-weight: 700;
     color: #fff;
-    font-size: 3.5rem;
+    font-size: 5.5rem;
     letter-spacing: 8px;
 }
 
 .hero__sub-title h4 {
     font-weight: 600;
     color: #fff5c6;
-    font-size: 1.5rem;
-    margin: 3rem 0;
+    font-size: 2.5rem;
+    margin: 4rem 0;
     letter-spacing: 2px;
     opacity: 0.8;
 }
 
 .hero__button {
     font-weight: 500;
-    padding: 0.8rem 4.5rem;
+    font-size: 1.8rem;
+    padding: 0.8rem 5.5rem;
     text-transform: uppercase;
     background-color: #f6b037;
     text-decoration: none;
@@ -82,11 +88,16 @@
 }
 
 .hero__story-button a {
+    font-size: 1.5rem;
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
     display: inline-block;
     transition: 0.2s all;
+}
+
+.hero__story-button a p:last-child {
+    font-size: 3rem;
 }
 
 .hero__story-button a:hover {
@@ -95,7 +106,43 @@
 
 .games {
     min-height: 100vh;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.6) 70%), url(/assets/the-games-bg.jpg);
+    padding: 15rem 0;
+    background-image: radial-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 70%), url(/assets/the-games-bg.jpg);
     background-position: center;
     background-size: cover;
+}
+
+.games__title {
+    color: #fff;
+}
+
+.games__title-small {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.games__title-big {
+    font-size: 5rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.games__slider {
+    position: relative;
+    top: 15%;
+    left: 0;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 4rem;
+    /* height: 200px; */
+    /* background-color: #ffab1b; */
+}
+
+.games__slider .carousel-control-prev {
+    left: -75px;
+}
+
+.games__slider .carousel-control-next {
+    right: -75px;
 }
