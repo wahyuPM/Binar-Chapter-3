@@ -521,6 +521,84 @@ html {
 }
 /* end newsletter */
 
+/* start footer */
+footer {
+    background-color: #080a0b;
+    border: none;
+    color: #fff;
+    margin-top: -5px;
+    padding: 5rem 0;
+}
+ul.footer__menu {
+    padding: 0;
+    text-align: right;
+}
+ul.footer__menu li {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 2rem;
+}
+
+ul.footer__menu li a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.2s;
+}
+
+ul.footer__menu li a:hover {
+    color: #f6b037;
+}
+
+.footer__social {
+    margin-left: 4rem;
+}
+
+footer hr {
+    height: 5px !important;
+}
+
+.footer__copyright {
+    font-size: 1.2rem;
+    color: #999;
+}
+
+ul.footer__copyright-menu {
+    margin: 0;
+    text-align: right;
+}
+
+.footer__copyright-menu li {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 2rem;
+}
+
+.footer__copyright-menu li::after {
+    content: "|";
+    margin-left: 1rem;
+}
+
+.footer__copyright-menu li:last-child:after {
+    content: "";
+}
+
+.footer__copyright-menu li a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.2s;
+}
+
+.footer__copyright-menu li a:hover {
+    color: #f6b037;
+}
+/* end footer */
+
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
     width: 4rem;
