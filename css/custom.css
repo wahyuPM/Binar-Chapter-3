@@ -1,22 +1,23 @@
-body {
-    font-family: "Open Sans", sans-serif;
-}
-
 html {
     font-size: 62.5%;
     font-family: "Bebas Neue", cursive;
     line-height: 1.7;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
 }
 
 /*start typography */
 .title-big {
-    font-size: 5rem;
+    font-size: 2.5rem;
     letter-spacing: 8px;
     text-transform: uppercase;
 }
 
 .title-small {
-    font-size: 2.8rem;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
@@ -62,6 +63,138 @@ html {
 }
 /* button */
 
+/* Header section */
+#header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+#header .header {
+    min-height: 12vh;
+    background-color: rgba(31, 30, 30, 0.24);
+    transition: 0.3s ease background-color;
+}
+
+#header .header .brand a {
+    text-decoration: none;
+    color: #fff;
+}
+#header .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 12vh;
+    /* max-width: 1300px; */
+    padding: 0 10px;
+}
+#header .nav-list ul {
+    list-style: none;
+    position: absolute;
+    background-color: rgb(31, 30, 30);
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s ease left;
+}
+#header .nav-list ul.active {
+    left: 0%;
+}
+#header .nav-list ul a {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+#header .nav-list ul a::after {
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: rgba(240, 248, 255, 0.021);
+    font-size: 13rem;
+    letter-spacing: 50px;
+    z-index: -1;
+    transition: 0.3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+    transform: translate(-50%, -50%) scale(1);
+    letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+    color: #f6b037;
+}
+#header .hamburger {
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(0.8);
+    /* margin-right: 20px; */
+}
+#header .hamburger:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+    animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar {
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background-color: white;
+    z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    transition: 0.3s ease;
+    transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+    top: 8px;
+}
+#header .hamburger .bar::before {
+    bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+    bottom: 0;
+}
+#header .hamburger.active .bar::after {
+    top: 0;
+}
+/* End Header section */
+
 /* start hero header */
 .hero {
     min-height: 100vh;
@@ -91,14 +224,14 @@ html {
     text-transform: uppercase;
     font-weight: 700;
     color: #fff;
-    font-size: 5.5rem;
+    font-size: 3.2rem;
     letter-spacing: 8px;
 }
 
 .hero__sub-title h4 {
     font-weight: 600;
     color: #fff5c6;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 4rem 0;
     letter-spacing: 2px;
     opacity: 0.8;
@@ -179,7 +312,7 @@ html {
     background-image: url(/assets/features.jpg);
     background-size: cover;
     background-position: center;
-    /* backface-visibility: hidden; */
+    backface-visibility: hidden;
 }
 
 .features__title {
@@ -328,6 +461,7 @@ html {
     background-repeat: no-repeat;
     margin-top: -5px;
     padding: 5rem 0;
+    overflow: hidden;
     /* display: flex;
     align-items: center; */
 }
@@ -611,4 +745,123 @@ ul.footer__copyright-menu {
 
 .carousel-control-prev-icon {
     background-image: url(/assets/left-svgrepo-com.svg);
+}
+
+/* Keyframes */
+@keyframes hamburger_puls {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+    }
+}
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}
+@keyframes text_reveal_name {
+    100% {
+        color: crimson;
+        font-weight: 500;
+    }
+}
+/* End Keyframes */
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 1200px) {
+    /* header */
+    .ml-lg-4 {
+        margin-left: 4rem;
+    }
+    #header .nav-bar {
+        padding: 0 10rem;
+    }
+    #header .hamburger {
+        display: none;
+    }
+    #header .nav-list ul {
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #header .nav-list ul li {
+        display: inline-block;
+    }
+    #header .nav-list ul li a {
+        font-size: 1.5rem;
+    }
+    #header .nav-list ul a:after {
+        display: none;
+    }
+    /* End header */
+}
+/* End  Media Query For Desktop */
+
+/* Media Query For Tab-big */
+@media only screen and (min-width: 1024px) {
+    .title-big {
+        font-size: 5rem;
+    }
+
+    .title-small {
+        font-size: 2.8rem;
+    }
+}
+
+/* Media Query For Tab-small */
+@media only screen and (min-width: 768px) {
+    .hero__main-title h1 {
+        font-size: 5.5rem;
+    }
+    .hero__sub-title h4 {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .card-items-1,
+    .card-items-2,
+    .card-items-3 {
+        width: auto;
+        margin: 0 0 20px 0;
+    }
+
+    .form__subscribe {
+        flex-direction: column;
+    }
+
+    .form__input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .features__list ul::before {
+        height: 55%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+    .games__slider .carousel-control-prev {
+        left: -40px;
+    }
+
+    .games__slider .carousel-control-next {
+        right: -40px;
+    }
 }
