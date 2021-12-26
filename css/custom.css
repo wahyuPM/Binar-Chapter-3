@@ -735,6 +735,45 @@ ul.footer__copyright-menu {
 }
 /* end footer */
 
+/*Start Login Page */
+.bg-login {
+    height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom right, rgba(41, 41, 41, 0.706), rgba(20, 20, 20, 0.478)),
+        url(/assets/requirements.png);
+    background-size: cover;
+    background-position: 85%;
+}
+
+.form__login {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 50px;
+    width: 90%;
+    font-size: 1.5rem;
+}
+
+.form__login input {
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+}
+
+.form__login .main__button {
+    font-size: 1.5rem;
+}
+
+.greetings-main,
+.greetings-sub {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+/* End Login Page */
+
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
     width: 4rem;
@@ -838,40 +877,14 @@ ul.footer__copyright-menu {
     .features__list ul::before {
         height: 55%;
     }
-}
-/*End Media Query For Phone */
-
-/* Media Query For Phone-Small */
-@media only screen and (min-width: 320px) and (max-width: 414px) {
-    .games__slider .carousel-control-prev {
-        left: -40px;
-    }
-
-    .games__slider .carousel-control-next {
-        right: -40px;
-    }
-
-    .features {
-        background-position: left;
-    }
 
     footer {
         padding: 5rem 0 1rem 0;
     }
 
-    .footer__social {
-        margin-left: 0;
-    }
-
-    .footer__social a {
+    ul.footer__menu {
+        text-align: center;
         margin-bottom: 2rem;
-    }
-
-    ul.footer__menu li {
-        display: block;
-        text-align: left;
-        margin-bottom: 2rem;
-        margin-left: 0;
     }
 
     ul.footer__copyright-menu {
@@ -895,5 +908,36 @@ ul.footer__copyright-menu {
     .footer__copyright-menu li:last-child:before {
         content: "|";
         margin-right: 1rem;
+    }
+}
+/*End Media Query For Phone */
+
+/* Media Query For Phone-Small */
+@media only screen and (min-width: 320px) and (max-width: 414px) {
+    .games__slider .carousel-control-prev {
+        left: -40px;
+    }
+
+    .games__slider .carousel-control-next {
+        right: -40px;
+    }
+
+    .features {
+        background-position: left;
+    }
+
+    .footer__social {
+        margin-left: 0;
+    }
+
+    .footer__social a {
+        margin-bottom: 2rem;
+    }
+
+    ul.footer__menu li {
+        display: block;
+        text-align: left;
+        margin-bottom: 2rem;
+        margin-left: 0;
     }
 } /*End Media Query For Phone-Small */
