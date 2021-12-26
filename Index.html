@@ -44,7 +44,7 @@
     </nav>
 
     <main>
-        <section class="hero">
+        <section id="hero" class="hero">
             <div class="container">
                 <div class="hero__content">
                     <div class="hero__main-title">
@@ -56,7 +56,7 @@
                     <button class="main__button">Play Now</button>
                 </div>
                 <div class="hero__story-button">
-                    <a href="#" class="text-center">
+                    <a href="#games" class="text-center">
                         <p class="m-0">The Story</p>
                         <p class="m-0">&#10597;</p>
                     </a>
@@ -64,7 +64,7 @@
             </div>
         </section>
 
-        <section class="games">
+        <section id="games" class="games">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-lg-4 px-5 px-md-2">
@@ -113,7 +113,7 @@
             </div>
         </section>
 
-        <section class="features">
+        <section id="features" class="features">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-lg-5 offset-md-6 offset-lg-7 px-5 px-md-2">
@@ -151,7 +151,7 @@
             </div>
         </section>
 
-        <section class="system">
+        <section id="system" class="system">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -308,17 +308,17 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9 px-5 px-md-0 mb-4 mb-md-0">
+                    <div class="col-md-9 px-5 px-md-0 mb-4 mb-md-0 order-0">
                         <ul class="footer__menu">
-                            <li><a href="#">main</a></li>
+                            <li><a href="#home">main</a></li>
                             <li><a href="#">about</a> </li>
-                            <li><a href="#">game features</a></li>
-                            <li><a href="#">system requirements</a> </li>
+                            <li><a href="#features">game features</a></li>
+                            <li><a href="#system">system requirements</a> </li>
                             <li><a href="#">quotes</a> </li>
                         </ul>
                     </div>
                     <div class="col-md-3 px-5 px-md-0">
-                        <div class="footer__social d-flex flex-column flex-md-row justify-content-between">
+                        <div class="footer__social d-flex justify-content-between">
                             <a href="#"><img src="/assets/facebook.svg" alt=""></a>
                             <a href="#"><img src="/assets/twitter.svg" alt=""></a>
                             <a href="#"><img src="/assets/Vector.svg" alt=""></a>
@@ -328,12 +328,15 @@
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col-12 col-md-4 my-2">
-                        <div class="footer__copyright">
-                            <span>&copy; Your Games, Inc. All Right Reserved</span>
+                    <div class="col-12 col-md-4 my-2 order-1 order-md-0">
+                        <div class="footer__copyright text-center text-md-start">
+                            <span>&copy;
+                                <script>document.write(new Date().getFullYear())</script> Your Games, Inc. All Right
+                                Reserved
+                            </span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-8 my-2">
+                    <div class="col-12 col-md-8 my-2 order-0 order-md-1">
                         <ul class="footer__copyright-menu">
                             <li><a href="#">privacy policy</a></li>
                             <li><a href="#">terms of services</a> </li>

@@ -702,6 +702,7 @@ footer hr {
 
 ul.footer__copyright-menu {
     margin: 0;
+    padding: 0;
     text-align: right;
 }
 
@@ -841,7 +842,7 @@ ul.footer__copyright-menu {
 /*End Media Query For Phone */
 
 /* Media Query For Phone-Small */
-@media only screen and (min-width: 320px) and (max-width: 375px) {
+@media only screen and (min-width: 320px) and (max-width: 414px) {
     .games__slider .carousel-control-prev {
         left: -40px;
     }
@@ -852,6 +853,10 @@ ul.footer__copyright-menu {
 
     .features {
         background-position: left;
+    }
+
+    footer {
+        padding: 5rem 0 1rem 0;
     }
 
     .footer__social {
@@ -867,5 +872,28 @@ ul.footer__copyright-menu {
         text-align: left;
         margin-bottom: 2rem;
         margin-left: 0;
+    }
+
+    ul.footer__copyright-menu {
+        text-align: center;
+    }
+
+    .footer__copyright-menu li {
+        margin-bottom: 1rem;
+    }
+
+    .footer__copyright-menu li:first-child:before {
+        content: "|";
+        margin-right: 1rem;
+    }
+
+    .footer__copyright-menu li:last-child:after {
+        content: "|";
+        margin-left: 1rem;
+    }
+
+    .footer__copyright-menu li:last-child:before {
+        content: "|";
+        margin-right: 1rem;
     }
 } /*End Media Query For Phone-Small */
