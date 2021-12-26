@@ -671,6 +671,7 @@ ul.footer__menu li {
     display: inline-block;
     font-size: 1.5rem;
     font-weight: 400;
+    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-left: 2rem;
@@ -758,27 +759,6 @@ ul.footer__copyright-menu {
         transform: scale(1.4);
     }
 }
-@keyframes text_reveal_box {
-    50% {
-        width: 100%;
-        left: 0;
-    }
-    100% {
-        width: 0;
-        left: 100%;
-    }
-}
-@keyframes text_reveal {
-    100% {
-        color: white;
-    }
-}
-@keyframes text_reveal_name {
-    100% {
-        color: crimson;
-        font-weight: 500;
-    }
-}
 /* End Keyframes */
 
 /* Media Query For Desktop */
@@ -823,6 +803,7 @@ ul.footer__copyright-menu {
         font-size: 2.8rem;
     }
 }
+/*End Media Query For Tab-big */
 
 /* Media Query For Tab-small */
 @media only screen and (min-width: 768px) {
@@ -833,7 +814,9 @@ ul.footer__copyright-menu {
         font-size: 2.5rem;
     }
 }
+/*End Media Query For Tab-small */
 
+/* Media Query For Phone */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
     .card-items-1,
     .card-items-2,
@@ -855,7 +838,9 @@ ul.footer__copyright-menu {
         height: 55%;
     }
 }
+/*End Media Query For Phone */
 
+/* Media Query For Phone-Small */
 @media only screen and (min-width: 320px) and (max-width: 375px) {
     .games__slider .carousel-control-prev {
         left: -40px;
@@ -864,4 +849,23 @@ ul.footer__copyright-menu {
     .games__slider .carousel-control-next {
         right: -40px;
     }
-}
+
+    .features {
+        background-position: left;
+    }
+
+    .footer__social {
+        margin-left: 0;
+    }
+
+    .footer__social a {
+        margin-bottom: 2rem;
+    }
+
+    ul.footer__menu li {
+        display: block;
+        text-align: left;
+        margin-bottom: 2rem;
+        margin-left: 0;
+    }
+} /*End Media Query For Phone-Small */
