@@ -1,0 +1,98 @@
+.margin-big {
+    margin: 5rem 0;
+}
+
+.bg-games {
+    min-height: 100vh;
+    background-color: #9b835f;
+}
+
+.header__games {
+    display: flex;
+    align-items: center;
+    margin: 0 2.5rem;
+}
+
+.header__games-item {
+    margin: 0 2rem;
+}
+
+.header__games-item .back-button {
+    color: #724c21;
+    font-size: 72px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.games-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 49px;
+    color: #f9b23d;
+}
+
+.player-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 49px;
+    color: #000;
+}
+
+.icon-games {
+    width: 50%;
+    height: auto;
+}
+
+.icon-selection-player,
+.icon-selection-com {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    height: 120px;
+    border-radius: 20px;
+    flex: 0 0 30%;
+    transition: all 0.5s;
+}
+
+.icon-selection-player:hover {
+    border-radius: 20px;
+    background-color: #c4c4c4;
+}
+
+.game-condition {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    transform: translate(-50%, -50%);
+}
+
+.game-condition .versus h1 {
+    font-size: 144px;
+    font-weight: 700;
+    color: #bd0000;
+}
+
+.game-condition .player1-win {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: auto;
+    padding: 10px 30px;
+    background-color: #4c9654;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.game-condition .player1-win h1 {
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.game-condition .player1-win .show {
+    transform: rotate(-28.87deg);
+}
