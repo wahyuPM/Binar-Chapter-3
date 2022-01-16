@@ -74,7 +74,7 @@
     color: #bd0000;
 }
 
-.game-condition .player1-win {
+.game-condition .winner {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,13 +86,13 @@
     transition: all 0.5s;
 }
 
-.game-condition .player1-win h1 {
+.game-condition .winner h1 {
     color: #fff;
     font-size: 35px;
     text-transform: uppercase;
     text-align: center;
 }
 
-.game-condition .player1-win .show {
+.game-condition .winner .show {
     transform: rotate(-28.87deg);
 }
