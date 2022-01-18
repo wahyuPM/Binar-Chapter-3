@@ -5,6 +5,7 @@
 .bg-games {
     min-height: 100vh;
     background-color: #9b835f;
+    padding: 4rem 0;
 }
 
 .header__games {
@@ -55,7 +56,17 @@
     transition: all 0.5s;
 }
 
-.icon-selection-player:hover {
+.icon-selection-com {
+    pointer-events: none;
+}
+
+.icon-selection-player:hover,
+.icon-selection-player:focus {
+    border-radius: 20px;
+    background-color: #c4c4c4;
+}
+
+.active {
     border-radius: 20px;
     background-color: #c4c4c4;
 }
@@ -95,4 +106,20 @@
 
 .game-condition .winner .show {
     transform: rotate(-28.87deg);
+}
+
+.refresh-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.refresh-button img {
+    width: 5%;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.refresh-button img:hover {
+    transform: rotate(120deg);
 }
