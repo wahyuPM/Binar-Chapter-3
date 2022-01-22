@@ -94,7 +94,7 @@
     padding: 10px 30px;
     background-color: #4c9654;
     border-radius: 10px;
-    transition: all 0.5s;
+    transition: all 1.5s;
 }
 
 .game-condition .winner h1 {
@@ -104,7 +104,7 @@
     text-align: center;
 }
 
-.game-condition .winner .show {
+.game-condition .winner.show {
     transform: rotate(-28.87deg);
 }
 

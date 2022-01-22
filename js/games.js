@@ -4,6 +4,8 @@ let paperPlayer = document.querySelector('#paper--player')
 let paperCpu = document.querySelector('#paper--com')
 let scissorsPlayer = document.querySelector('#scissors--player')
 let scissorsCpu = document.querySelector('#scissors--com')
+let resultGames = document.querySelector('.winner')
+let winnerPlayer = document.querySelector('#winner-player')
 
 class Game {
     constructor() {
@@ -28,13 +30,27 @@ class Game {
             case 'rockscissors':
             case 'paperrock':
             case 'scissorspaper':
-                this.result = 'Player Win'
+                this.result = 'Player 1 Win'
+                resultGames.classList.remove('d-none')
+                resultGames.classList.add('show')
+                winnerPlayer.textContent = this.result
                 console.log(this.result);
                 break
             case 'rockpaper':
             case 'paperscissors':
             case "scissorsrock":
                 this.result = "Com Win"
+                resultGames.classList.remove('d-none')
+                resultGames.classList.add('show')
+                winnerPlayer.textContent = this.result
+                console.log(this.result);
+                break
+            case 'rockrock':
+            case 'paperpaper':
+            case "scissorsscissors":
+                this.result = "Draw"
+                resultGames.classList.remove('d-none')
+                winnerPlayer.textContent = this.result
                 console.log(this.result);
                 break
         }
@@ -62,7 +78,6 @@ function main() {
     })
 
     paperPlayer.addEventListener('click', function () {
-
         if (start.playerChoice !== null) {
             alert('silahkan tekan tombol reset')
         } else {
