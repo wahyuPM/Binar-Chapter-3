@@ -42,9 +42,11 @@ body {
     transition: all 0.2s;
     position: relative;
     border: none;
+    color: #000;
 }
 
 .main__button:hover {
+    color: #000;
     background-color: #ffab1b;
     transform: translateY(-3px);
     box-shadow: 0 2rem 1rem rgba(78, 78, 78, 0.2);

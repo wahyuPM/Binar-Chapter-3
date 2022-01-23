@@ -6,6 +6,8 @@ let scissorsPlayer = document.querySelector('#scissors--player')
 let scissorsCpu = document.querySelector('#scissors--com')
 let resultGames = document.querySelector('.winner')
 let winnerPlayer = document.querySelector('#winner-player')
+let versus = document.querySelector('.versus')
+let refreshBtn = document.querySelector('.refresh-button')
 
 class Game {
     constructor() {
@@ -20,6 +22,14 @@ class Game {
         return choices[randomNumber];
     }
 
+    toggleClass(toggleDnone, animateResult) {
+        window.setTimeout(function () {
+            versus.classList.toggle(toggleDnone)
+            resultGames.classList.toggle(toggleDnone)
+            resultGames.classList.toggle(animateResult)
+        }, 300)
+    }
+
     play(playerChoice) {
         this.cpuChoice = this.getCpuChoice()
         this.playerChoice = playerChoice
@@ -31,8 +41,7 @@ class Game {
             case 'paperrock':
             case 'scissorspaper':
                 this.result = 'Player 1 Win'
-                resultGames.classList.remove('d-none')
-                resultGames.classList.add('show')
+                this.toggleClass('d-none', 'show')
                 winnerPlayer.textContent = this.result
                 console.log(this.result);
                 break
@@ -40,8 +49,7 @@ class Game {
             case 'paperscissors':
             case "scissorsrock":
                 this.result = "Com Win"
-                resultGames.classList.remove('d-none')
-                resultGames.classList.add('show')
+                this.toggleClass('d-none', 'show')
                 winnerPlayer.textContent = this.result
                 console.log(this.result);
                 break
@@ -49,7 +57,7 @@ class Game {
             case 'paperpaper':
             case "scissorsscissors":
                 this.result = "Draw"
-                resultGames.classList.remove('d-none')
+                this.toggleClass('d-none', 'show')
                 winnerPlayer.textContent = this.result
                 console.log(this.result);
                 break
@@ -113,8 +121,21 @@ function main() {
         }
     })
 
+    let removeClass = (activeClass) => {
+        scissorsPlayer.classList.remove(activeClass)
+        scissorsCpu.classList.remove(activeClass)
+        paperPlayer.classList.remove(activeClass)
+        paperCpu.classList.remove(activeClass)
+        rockPlayer.classList.remove(activeClass)
+        rockCpu.classList.remove(activeClass)
+        start.toggleClass('d-none', 'show')
+    }
+
+    refreshBtn.addEventListener('click', function () {
+        start.playerChoice = null
+        start.cpuChoice = null
+        start.result = null
+        removeClass('active')
+    })
 }
 main()
-
-
-console.log();
