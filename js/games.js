@@ -132,10 +132,12 @@ function main() {
     }
 
     refreshBtn.addEventListener('click', function () {
-        start.playerChoice = null
-        start.cpuChoice = null
-        start.result = null
-        removeClass('active')
+        if (start.result !== null) {
+            start.playerChoice = null
+            start.cpuChoice = null
+            start.result = null
+            removeClass('active')
+        }
     })
 }
 main()
