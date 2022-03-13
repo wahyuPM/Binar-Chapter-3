@@ -206,7 +206,7 @@ body {
             rgba(52, 44, 29, 0.30319) 73.22%,
             #08090a 99.74%
         ),
-        url(/assets/main-bg.jpg);
+        url(../assets/main-bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -271,7 +271,7 @@ body {
     padding: 15rem 0;
     display: flex;
     align-items: center;
-    background-image: radial-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 70%), url(/assets/the-games-bg.jpg);
+    background-image: radial-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 70%), url(../assets/the-games-bg.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -311,7 +311,7 @@ body {
 .features {
     min-height: 100vh;
     padding: 15rem 0;
-    background-image: url(/assets/features.jpg);
+    background-image: url(../assets/features.jpg);
     background-size: cover;
     background-position: center;
     backface-visibility: hidden;
@@ -395,7 +395,7 @@ body {
 .system {
     min-height: 100vh;
     padding: 10rem 0;
-    background-image: radial-gradient(rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.8) 60%), url(/assets/requirements.png);
+    background-image: radial-gradient(rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.8) 60%), url(../assets/requirements.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -445,7 +445,7 @@ body {
             rgba(0, 0, 0, 0) 19.22%,
             #080a0b 99.74%
         ),
-        url(/assets/bg-5.webp);
+        url(../assets/bg-5.webp);
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: -5px;
@@ -574,7 +574,7 @@ body {
 .newsletter__bg {
     min-height: 80vh;
     width: auto;
-    background-image: radial-gradient(rgba(5, 7, 7, 0) 50%, rgba(5, 7, 7, 0.8) 70%), url(/assets/stone_2.png);
+    background-image: radial-gradient(rgba(5, 7, 7, 0) 50%, rgba(5, 7, 7, 0.8) 70%), url(../assets/stone_2.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -730,7 +730,7 @@ ul.footer__copyright-menu {
     position: relative;
     box-sizing: border-box;
     background-image: linear-gradient(to bottom right, rgba(41, 41, 41, 0.706), rgba(20, 20, 20, 0.478)),
-        url(/assets/requirements.png);
+        url(../assets/requirements.png);
     background-size: cover;
     background-position: 85%;
 }
@@ -770,11 +770,11 @@ ul.footer__copyright-menu {
 }
 
 .carousel-control-next-icon {
-    background-image: url(/assets/right-svgrepo-com.svg);
+    background-image: url(../assets/right-svgrepo-com.svg);
 }
 
 .carousel-control-prev-icon {
-    background-image: url(/assets/left-svgrepo-com.svg);
+    background-image: url(../assets/left-svgrepo-com.svg);
 }
 
 /* Keyframes */
